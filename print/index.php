@@ -50,7 +50,7 @@ if (isset($_POST['submit'])){
 	
 	.cap {
 		visibility: visible;
-		background-image: url(../img/cap.png) !important;
+		background-image: url(../img/cap-smkn2.png) !important;
 		background-position: 77%;
 		background-repeat: no-repeat;
 		background-size: 22%;
@@ -121,8 +121,8 @@ if (isset($_POST['submit'])){
 					</td>
 					<td width="35%" valign="top">
 							Sumedang, 7 Maret 2024 <br> Kepala Sekolah,
-							<img style="width: 129px; height: 67px" src="../img/<?= $hsl['ttd'] ?>" >
-							<br>
+							<img style="width: 200px; height: 100px" src="../img/<?= $hsl['ttd'] ?>" >
+						
 							
 							<u>
 							<b><?=$kepsek;?></b>

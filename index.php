@@ -15,7 +15,7 @@ include "header.php";
 	<label style=" font-size:20px;">
 		<?= $hsl['sekolah'] ?> <br>
 		<?php 
-		echo "TAHUN PELAJARAN ".$tahun_ajaran;
+		echo "TAHUN PELAJARAN 2023/2024";
 		?>
 	</label>
 </div>
@@ -103,32 +103,21 @@ include "header.php";
 						</tr> -->
 					</tbody>
 				</table>
-				<?php
-					$no_ujian = base64_encode(base64_encode(htmlspecialchars($data['no_ujian'])));
-					// $noujian = base64_encode("no_ujian");
-				if ($data['status'] == 1) { ?>
-					<form method="post" action="print/" target="_blank">
+				<?php 
+				$no_ujian = base64_encode(base64_encode(htmlspecialchars($data['no_ujian']))); ?>
+				<form method="post" action="print/" target="_blank">
 						<center> 
 						<div class="alert alert-success" role="alert">
-							<b>SELAMAT !</b> Anda dinyatakan <b>L U L U S</b>
-							<br><i>Cetak surat keterangan lulus :</i> &nbsp; &nbsp; <br>
+							
+							<br><i>Cetak surat keterangan :</i> &nbsp; &nbsp; <br>
 							<input type="hidden" name="nomor" value="<?=$no_ujian;?>">
 							<Button class="btn-primary" type="submit" name="submit"><i class="fa fa-print"> </i> &nbsp; CETAK </Button>
-							<a href="print.php?id=<?= htmlspecialchars($data['nisn']);?>" class=" btn btn-primary" type="button" name="download"><i class="fa fa-print"> </i> &nbsp; PRINT </a>
+							<!-- <a href="print.php?id=<?= htmlspecialchars($data['nisn']);?>" class=" btn btn-primary" type="button" name="download"><i class="fa fa-print"> </i> &nbsp; PRINT </a> -->
 							<!-- <a href="download.php?file=<?= htmlspecialchars($data['kls']."_".$data['nama']); ?>_0001.pdf" class=" btn btn-primary" type="button" name="download"><i class="fa fa-print"> </i> &nbsp; DOWNLOAD </a> -->
 						</div> 
 						</center>
 					</form>
-						<center>
-							<a href="./"><button class="btn btn-primary">KEMBALI</button></a>
-						</center> 
-						<br>
-
-				<?php } else {
-					echo '<div class="alert alert-danger" role="alert"><strong>MAAF !</strong> Anda dinyatakan TIDAK LULUS.</div>';
-					echo	'<center><a href="./"><button class="btn btn-primary">KEMBALI</button></a></center> <br>';
-				}
-				?>
+				
 
 			<?php
 			} else {
